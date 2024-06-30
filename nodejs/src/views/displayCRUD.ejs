@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get CRUD</title>
+</head>
+<style>
+    table {
+        margin: 0 auto;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 4px 8px;
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        width: 60px;
+        padding: 4px;
+        border-radius: 4px;
+
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        width: 60px;
+        padding: 4px;
+        border-radius: 4px;
+        text-align: center;
+        color: unset;
+
+    }
+
+    .btn-edit {
+        /* color: white; */
+        background-color: orange;
+    }
+
+    .btn-delete {
+        color: white;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <table style="width:90%">
+        <tr>
+            <th>Name</th>
+            <th>ProvinceId</th>
+            <th>Phone number</th>
+            <th>Restaurant Id</th>
+            <th>Type Id</th>
+            <th>PriceId</th>
+            <th>Note</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <% for(let i=0; i < dataTable.length; i++) { %>
+        <tr>
+            
+            <td>
+                <%= dataTable[i].name %>
+            </td>
+            <td>
+                <%= dataTable[i].provinceId %>
+            </td>
+            
+            <td>
+                <%= dataTable[i].phonenumber %>
+            </td>
+            
+            <td>
+                <%= dataTable[i].restaurantId %>
+            </td>
+            <td>
+                <%= dataTable[i].typeId %>
+            </td>
+            <td>
+                <%= dataTable[i].priceId %>
+            </td>
+            <td>
+                <%= dataTable[i].note %>
+            </td>
+
+            
+            <td>
+                <a href="/edit-crud/?id=<%= dataTable[i].id %>" class="btn-edit" type="button">Edit</a>
+                <a href="/delete-crud/?id=<%= dataTable[i].id %>" class="btn-delete" type="button">Delete</a>
+            </td>
+
+        </tr>
+        <% } %>
+            </tr>
+
+    </table>
+</body>
+
+</html>

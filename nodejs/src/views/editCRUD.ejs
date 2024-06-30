@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Latest compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit restaurant's information</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <form action="/put-crud" method="POST">
+          <div class="form-row align-center">
+            <div class="col-12 mt-3">
+              <h3>Edit restaurant's information</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Name</label>
+                <input
+                  type="name"
+                  class="form-control"
+                  name="name"
+                  placeholder="Name"
+                  value="<%=restaurant.name%>"
+                />
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="inputPhonenumber">Phone number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phonenumber"
+                  placeholder="0123456789"
+                  value="<%=restaurant.phonenumber%>"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="inputProvince">Province</label>
+              <input
+                type="text"
+                class="form-control"
+                name="provinceId"
+                placeholder="PRO1"
+                value="<%=restaurant.provinceId%>"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="inputRestaureantId">restaurantId</label>
+              <input
+                type="text"
+                class="form-control"
+                name="restaurantId"
+                placeholder="1234 Main St"
+                value="<%=restaurant.restaurantId%>"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTypeId">typeId</label>
+            <input
+              type="text"
+              class="form-control"
+              name="typeId"
+              placeholder="typeId"
+              value="<%=restaurant.typeId%>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputNote">Note</label>
+            <input
+              type="text"
+              class="form-control"
+              name="note"
+              placeholder="Note"
+              value="<%=restaurant.note%>"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPrice">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                name="priceId"
+                placeholder="PRI1"
+                value="<%=restaurant.priceId%>"
+              />
+            </div>
+
+
+            </div>
+          </div>
+          <input type="text" name="id" value="<%=restaurant.id %>" hidden />
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

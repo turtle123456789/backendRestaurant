@@ -1,0 +1,45 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node --trace-deprecation src/server.js",
+    "build-src": "./node_modules/.bin/babel src -d build --copy-files",
+    "build": "node build/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "@material-ui/core": "^4.12.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^1.31.0",
+    "cors": "^2.8.5",
+    "dateformat": "^5.0.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "md5": "^2.2.1",
+    "mysql2": "^2.2.5",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.6.9",
+    "nodemailer": "^6.9.13",
+    "qs": "^6.7.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.6.2",
+    "sha256": "^0.2.0",
+    "short-uuid": "^5.2.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/node": "^7.22.19",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}
